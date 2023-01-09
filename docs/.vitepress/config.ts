@@ -41,7 +41,13 @@ export default defineConfig({
                     { text: 'Match Blocks', link: '/features/match-blocks' },
                     { text: 'Ranges', link: '/features/ranges' },
                     { text: 'Type Aliases', link: '/features/type-aliases' },
-                    { text: 'Auto-capture Closures', link: '/features/auto-capture-closures' }
+                    { text: 'Auto-capture Closures', link: '/features/auto-capture-closures' },
+                    {
+                        text: 'Under Discussion',
+                        items: [
+                            { text: 'Generics', link: '/features/under-discussion/generics' }
+                        ],
+                    }
                 ]
             }
         ],

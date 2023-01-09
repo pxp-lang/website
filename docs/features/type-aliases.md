@@ -70,7 +70,7 @@ You can import a type alias from another class in a similar fashion to functions
 
 ::: code-group
 
-```pxp [one.php]
+```pxp [one.pxp]
 namespace App\One;
 
 type number = int|float;
@@ -80,7 +80,7 @@ function add(number $a, number $b): number {
 }
 ```
 
-```pxp [two.php]
+```pxp [two.pxp]
 namespace App\Two;
 
 use type App\One\number;
