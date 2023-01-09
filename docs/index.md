@@ -1,6 +1,8 @@
 ---
 layout: home
 
+title: PXP
+
 hero:
     name: PXP
     tagline: A superset of PHP with extended syntax and runtime capabilities.
@@ -11,4 +13,14 @@ hero:
         - theme: alt
           text: View on GitHub
           link: https://github.com/pxp-lang
+
+features:
+  - title: Extended type system
+    details: Additions to PHP's type system allow you to better express your data and take advantage of powerful static analysis.
+  - title: Blazingly fast tooling
+    details: All of PXP's tooling is powered by Rust, resulting in blazingly fast build times, static analysis and formatting.
+  - title: Powerful runtime library
+    details: A first-party Composer package provides a set of classes and helpers to aid in producing safe PHP code.
+  - title: Developer experience
+    details: Each feature that PXP provides is carefully planned out to improve developer experience with zero negative effect.
 ---

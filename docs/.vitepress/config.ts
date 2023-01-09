@@ -1,4 +1,12 @@
 import { defineConfig } from 'vitepress'
+import { BUNDLED_LANGUAGES } from 'shiki'
+
+// NOTE: This is a hack to get Shiki to highlight PXP the same as PHP until we sort out our own grammar.
+const php = BUNDLED_LANGUAGES.find(lang => lang.id === 'php')
+if (php) {
+    php.aliases ||= [];
+    php.aliases.push('pxp')
+}
 
 export default defineConfig({
     title: 'The PXP Language',
@@ -25,6 +33,16 @@ export default defineConfig({
                     { text: 'Your First PXP File', link: '/getting-started/your-first-pxp-file' },
                     { text: 'Project Configuration', link: '/getting-started/project-configuration' }
                 ]
+            },
+            {
+                text: 'Features',
+                items: [
+                    { text: 'Short Match', link: '/features/short-match' },
+                    { text: 'Match Blocks', link: '/features/match-blocks' },
+                    { text: 'Ranges', link: '/features/ranges' },
+                    { text: 'Type Aliases', link: '/features/type-aliases' },
+                    { text: 'Auto-capture Closures', link: '/features/auto-capture-closures' }
+                ]
             }
         ],
 
@@ -36,5 +54,9 @@ export default defineConfig({
         footer: {
             copyright: 'Copyright &copy; 2023 Ryan Chandler. All rights reserved.'
         }
+    },
+
+    markdown: {
+        lineNumbers: true,
     }
 })

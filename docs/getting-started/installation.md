@@ -1,4 +1,4 @@
-# Installation
+# Installation <Badge type="info" text="subject to change" />
 
 Since PXP is still in the early stages of development, the recommended installation method is building from source.
 
