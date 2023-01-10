@@ -11,7 +11,8 @@ if (php) {
 export default defineConfig({
     title: 'The PXP Language',
     description: 'A superset of PHP with extended syntax and runtime capabilities.',
-
+    lastUpdated: true,
+    
     themeConfig: {
         siteTitle: false,
 
@@ -24,7 +25,8 @@ export default defineConfig({
                 text: 'Introduction',
                 items: [
                     { text: 'What is PXP?', link: '/introduction/what-is-pxp' }
-                ]
+                ],
+                collapsible: true,
             },
             {
                 text: 'Getting Started',
@@ -32,7 +34,8 @@ export default defineConfig({
                     { text: 'Installation', link: '/getting-started/installation' },
                     { text: 'Your First PXP File', link: '/getting-started/your-first-pxp-file' },
                     { text: 'Project Configuration', link: '/getting-started/project-configuration' }
-                ]
+                ],
+                collapsible: true,
             },
             {
                 text: 'Features',
@@ -45,10 +48,15 @@ export default defineConfig({
                     {
                         text: 'Under Discussion',
                         items: [
-                            { text: 'Generics', link: '/features/under-discussion/generics' }
+                            { text: 'Generics', link: '/features/under-discussion/generics' },
+                            { text: 'Variable Types', link: '/features/under-discussion/variable-types' },
+                            { text: 'Constant Variables', link: '/features/under-discussion/constant-variables' },
+                            { text: 'Pattern Matching', link: '/features/under-discussion/pattern-matching' },
+                            { text: 'Operator Overloading', link: '/features/under-discussion/operator-overloading' },
                         ],
                     }
-                ]
+                ],
+                collapsible: true,
             }
         ],
 
@@ -59,6 +67,11 @@ export default defineConfig({
 
         footer: {
             copyright: 'Copyright &copy; 2023 Ryan Chandler. All rights reserved.'
+        },
+
+        editLink: {
+            pattern: 'https://github.com/pxp-lang/website/edit/main/docs/:path',
+            text: 'Edit this page on GitHub'
         }
     },
 

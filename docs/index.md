@@ -1,6 +1,6 @@
 ---
 layout: home
-
+lastUpdated: false
 title: PXP
 
 hero:
