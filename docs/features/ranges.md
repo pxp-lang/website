@@ -18,7 +18,7 @@ foreach ($range as $n) {
 }
 ```
 
-```php [exclusive.pxp]
+```php [exclusive.php]
 $range = range(0, 3);
 
 array_pop($range);
@@ -53,7 +53,7 @@ foreach ($range as $n) {
 }
 ```
 
-```php [inclusive.pxp]
+```php [inclusive.php]
 $range = range(0, 3);
 
 foreach ($range as $n) {
@@ -87,7 +87,7 @@ foreach (80.. as $port) {
 }
 ```
 
-```php [endless.pxp]
+```php [endless.php]
 for ($port = 80; ; $port++) {
     if (! is_port_available($port)) {
         continue;
