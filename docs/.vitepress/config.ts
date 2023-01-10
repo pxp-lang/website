@@ -45,6 +45,7 @@ export default defineConfig({
                     { text: 'Ranges', link: '/features/ranges' },
                     { text: 'Type Aliases', link: '/features/type-aliases' },
                     { text: 'Auto-capture Closures', link: '/features/auto-capture-closures' },
+                    { text: 'Conditional Returns', link: '/features/conditional-returns' },
                     {
                         text: 'Under Discussion',
                         items: [
