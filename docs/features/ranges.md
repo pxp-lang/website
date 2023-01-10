@@ -46,7 +46,7 @@ An inclusive range (`x..=y`) will create an iterable from `x` (inclusive) to `y`
 ::: code-group
 
 ```pxp [inclusive.pxp]
-$range = 0..3;
+$range = 0..=3;
 
 foreach ($range as $n) {
     echo $n . "\n";
