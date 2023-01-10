@@ -13,7 +13,7 @@ Since PXP is still in the early stages of development, the recommended installat
 1. Use `cargo` to install PXP using Git.
 
 ```sh
-$ cargo install --git github.com/pxp-lang/pxp
+$ cargo install --git https://github.com/pxp-lang/pxp
 ```
 
 2. Ensure Cargo's bin directory is inside of your `$PATH`
