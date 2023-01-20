@@ -44,7 +44,7 @@ As you might expect, it's also possible to return a value when using a condition
 ::: code-group
 
 ```pxp [guard.pxp]
-function update(Contact $contact, array $data): void
+function update(Contact $contact, array $data): bool
 {
     return false if (! valid($data));
 
