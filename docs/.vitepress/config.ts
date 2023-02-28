@@ -42,13 +42,12 @@ export default defineConfig({
                 items: [
                     { text: 'Short Match', link: '/features/short-match' },
                     { text: 'Match Blocks', link: '/features/match-blocks' },
-                    { text: 'Ranges', link: '/features/ranges' },
-                    { text: 'Type Aliases', link: '/features/type-aliases' },
                     { text: 'Auto-capture Closures', link: '/features/auto-capture-closures' },
                     { text: 'Conditional Returns', link: '/features/conditional-returns' },
                     {
                         text: 'Under Discussion',
                         items: [
+                            { text: 'Type Aliases', link: '/features/under-discussion/type-aliases' },
                             { text: 'Generics', link: '/features/under-discussion/generics' },
                             { text: 'Variable Types', link: '/features/under-discussion/variable-types' },
                             { text: 'Constant Variables', link: '/features/under-discussion/constant-variables' },

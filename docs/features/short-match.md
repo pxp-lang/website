@@ -1,4 +1,4 @@
-# Short Match <Badge type="tip" text="implemented" />
+# Short Match
 
 The `match` expression was introduced in PHP 8.0 to improve on the existing `switch` statement and provide a clean way to pattern match against a value.
 

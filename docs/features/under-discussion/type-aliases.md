@@ -1,4 +1,4 @@
-# Type Aliases <Badge type="warning" text="basic support" />
+# Type Aliases <Badge type="warning" text="under discussion" />
 
 Type aliases are common in statically typed languages and provide a way of abstracting a type and reducing repetition in your code.
 
@@ -54,7 +54,7 @@ With the conversion to PXP, you can create an alias to a type and would only nee
 
 When PXP processes and transpiles the file, it will replace all of the aliases with their underlying type so that PHP can still execute the same runtime type checks as before.
 
-## Type exclusion <Badge type="danger" text="pending implementation" />
+## Type exclusion
 
 You may have noticed an unusual type definition on line 14 of the `HasLabel` example above, `Label ~ Closure`. In PXP, this operation is known as "type exclusion".
 
@@ -62,7 +62,7 @@ The idea here is that you can use a single type alias in multiple places and nar
 
 Specifiying the return type as `Label ~ Closure` will remove the `Closure` type during processing and transpile down to just `string | Htmlable | null`.
 
-## Cross-file type aliases <Badge type="danger" text="pending implementation" />
+## Cross-file type aliases
 
 In most cases a type alias will only be used locally, that is, in the file where the type alias is defined. This is the default behaviour in PXP meaning type aliases are not made available globally. There are definitely some valid use-cases for sharing a type alias across files, for example generic return types for methods or multiple classes that accept the same type of value across methods.
 

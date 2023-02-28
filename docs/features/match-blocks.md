@@ -1,4 +1,4 @@
-# Match Blocks <Badge type="tip" text="implemented" />
+# Match Blocks
 
 Another downside to using PHP's `match` expression is that you're limited to only a single expression in a match arm. This is fine if you want to defer the logic to a method or function call, but it can be useful to execute multiple pieces of logic inline.
 

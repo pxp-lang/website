@@ -1,4 +1,4 @@
-# Conditional Returns <Badge type="danger" text="requires implementation" />
+# Conditional Returns
 
 It is common for functions and methods to perform conditional returns based on a single condition. This is commonly referred to as a "guard" statement in other programming languages that have a dedicated structure for such behaviour.
 

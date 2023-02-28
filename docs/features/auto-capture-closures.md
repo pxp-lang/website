@@ -1,4 +1,4 @@
-# Auto-capture Closures <Badge type="tip" text="implemented" />
+# Auto-capture Closures
 
 Since the introduction of arrow functions `fn () => ...` in PHP 7.4, many PHP developers have been looking for a solution to multi-line auto-capturing closures. The current solution to using out-of-scope variables inside of a closure involves specifying each variable inside of the function's `use` clause.
 
