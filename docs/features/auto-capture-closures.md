@@ -28,4 +28,4 @@ The `use` clause can be completely removed as PXP will handle the capturing auto
 
 As described by the [RFC](https://wiki.php.net/rfc/auto-capture-closure), the surrounding environment is captured by-value. This means that trying to update the value of a variable will only affect the variable inside of the closure's own scope and not the surrounding scope.
 
-The only exception to this rule is updating / interacting with a variable that holds an object, since the underlying value is still a reference to an object in memory. This behavour is consistent with arrow functions.
+The only exception to this rule is updating / interacting with a variable that holds an object, since the underlying value is still a reference to an object in memory. This behaviour is consistent with arrow functions.
