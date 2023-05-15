@@ -38,15 +38,15 @@ export default defineConfig({
                 collapsible: true,
             },
             {
-                text: 'Features',
+                text: 'Language Features',
                 items: [
-                    { text: 'Short Match', link: '/features/short-match' },
-                    { text: 'Match Blocks', link: '/features/match-blocks' },
                     { text: 'Auto-capture Closures', link: '/features/auto-capture-closures' },
-                    { text: 'Conditional Returns', link: '/features/conditional-returns' },
                     {
                         text: 'Under Discussion',
                         items: [
+                            { text: 'Short Match', link: '/features/under-discussion/short-match' },
+                            { text: 'Match Blocks', link: '/features/under-discussion/match-blocks' },
+                            { text: 'Conditional Returns', link: '/features/under-discussion/conditional-returns' },
                             { text: 'Type Aliases', link: '/features/under-discussion/type-aliases' },
                             { text: 'Generics', link: '/features/under-discussion/generics' },
                             { text: 'Variable Types', link: '/features/under-discussion/variable-types' },
