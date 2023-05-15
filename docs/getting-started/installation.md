@@ -1,3 +1,9 @@
-# Installation <Badge type="info" text="subject to change" />
+# Installation
 
-> Installation instructions will be added soon.
+You can install PXP with Composer:
+
+```
+composer require pxp/pxp
+```
+
+This will install a `vendor/bin/pxp` binary.

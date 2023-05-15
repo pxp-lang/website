@@ -32,8 +32,8 @@ export default defineConfig({
                 text: 'Getting Started',
                 items: [
                     { text: 'Installation', link: '/getting-started/installation' },
-                    { text: 'Your First PXP File', link: '/getting-started/your-first-pxp-file' },
-                    { text: 'Project Configuration', link: '/getting-started/project-configuration' }
+                    { text: 'Project Configuration', link: '/getting-started/project-configuration' },
+                    { text: 'Your First PXP File', link: '/getting-started/your-first-pxp-file' }
                 ],
                 collapsible: true,
             },

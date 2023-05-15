@@ -17,8 +17,6 @@ hero:
 features:
   - title: Extended type system
     details: Additions to PHP's type system allow you to better express your data and take advantage of powerful static analysis.
-  - title: Blazingly fast tooling
-    details: All of PXP's tooling is powered by Rust, resulting in blazingly fast build times, static analysis and formatting.
   - title: Powerful runtime library
     details: A first-party Composer package provides a set of classes and helpers to aid in producing safe PHP code.
   - title: Developer experience

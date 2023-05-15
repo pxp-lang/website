@@ -22,40 +22,21 @@ echo "Hello, world!\n";
 
 ## Building
 
+Before building, ensure you have added the `hello.pxp` file to the `paths` array in your configuration file.
+
+```json
+{
+    "paths": [
+        "./hello.pxp"
+    ],
+    // ...
+}
+```
+
 To build the `hello.pxp` file, use the `pxp build` command.
 
 ```sh
-$ pxp build ./hello.pxp --stdout
+vendor/bin/pxp build
 ```
 
-The `--stdout` flag will print the generated PHP code in your terminal instead of writing it to disk.
-
-You should see the following output:
-
-```php
-<?php
-
-echo "Hello, world!\n";
-```
-
-To check that the PHP code works, pipe the output into `php`.
-
-```sh
-$ pxp build ./hello.pxp --stdout | php
-```
-
-You should see `Hello, world!` in your terminal.
-
-## Writing to disk
-
-Instead of outputting the generated code in the terminal, you'll likely want to write the generated code to a file.
-
-This is as simple as removing the `--stdout` flag and running the same command again.
-
-```sh
-$ pxp build ./hello.pxp
-```
-
-This will create a new `hello.php` file next to your `hello.pxp` file with the generated PHP code.
-
-> You can configure the output destination for generated files inside of your [project configuration](/getting-started/project-configuration).
+This will produce a `hello.php` file in the same directory as the `hello.pxp` file with the generated PHP code.

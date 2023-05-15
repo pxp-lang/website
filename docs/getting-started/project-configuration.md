@@ -1,32 +1,29 @@
 # Project Configuration
 
-Although the `pxp` binary can be used to process individual files, it's generally more useful to build all PXP files inside of your project.
+To initialise your project, use the `pxp init` command.
 
-Before you can do this, you need to initialize your project and do some minor configuration.
-
-## Generating the `pxp.toml` file
-
-All of PXP's configuration is done via a single [TOML](https://toml.io/) file in the root of your project. You can manually create this file or use the `pxp init` command to generate a basic one for you.
-
-```sh
-$ pxp init
+```
+vendor/bin/pxp init
 ```
 
-The generated file should look something like this:
+This will create a `pxp.json` in the current directory with the following structure.
 
-```toml
-[build]
-paths = [
-    "./"
-]
+```json
+{
+    "paths": [
+        "app"
+    ],
+    "transpiler": {
+        "sourceMap": false,
+        "strictTypes": false
+    }
+}
 ```
 
-## Configuration
+The table below describes all of the configuration options and whether they have been implemented yet.
 
-### Build
-
-The `[build]` section is used to configure PXP's build process.
-
-#### `paths`
-
-This configuration value should contain an array of paths that PXP will use to discover files when building your project. By default, it will search all folders relative to the current directory. In most cases, you will want to narrow down this search to your `/src` or `/app` folder to improve build performance.
+| Option | Description | Implemented? |
+| --- | --- | --- |
+| `paths` | An array of directories or files that should be transpiled by PXP | ✅ |
+| `transpiler.sourceMap` | Determines whether a source map should be generated when transpiling. This is used by PXP to ensure exceptions are accurate. | ❌ |
+| `transpiler.strictTypes` | Whether a `declare(strict_types=1)` should be automatically added to the generated PHP code. | ❌ |
