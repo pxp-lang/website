@@ -46,7 +46,6 @@ export default defineConfig({
                         items: [
                             { text: 'Short Match', link: '/features/under-discussion/short-match' },
                             { text: 'Match Blocks', link: '/features/under-discussion/match-blocks' },
-                            { text: 'Conditional Returns', link: '/features/under-discussion/conditional-returns' },
                             { text: 'Type Aliases', link: '/features/under-discussion/type-aliases' },
                             { text: 'Generics', link: '/features/under-discussion/generics' },
                             { text: 'Variable Types', link: '/features/under-discussion/variable-types' },
