@@ -87,5 +87,9 @@
     <main class="flex-1">
         {{ $slot }}
     </main>
+
+    <footer class="max-w-7xl mx-auto w-full px-6 py-6 text-xs text-neutral-500 text-center">
+        &copy; Copyright {{ date('Y') }} <a href="https://ryangjchandler.co.uk" class="underline">Ryan Chandler</a>. All rights reserved.
+    </footer>
 </body>
 </html>

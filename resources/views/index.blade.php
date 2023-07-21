@@ -26,8 +26,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="sm:mt-24 hidden md:block md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
-                    <pre class="text-sm bg-[#24292e] text-[#e1e4e8] [&_.line-number]:mr-4 leading-loose pl-4 rounded md:rounded-2xl">
+                <div class="sm:mt-24 mx-6 py-12 md:py-0 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
+                    <pre class="text-sm bg-[#24292e] text-[#e1e4e8] [&_.line-number]:mr-4 leading-loose pl-4 rounded-2xl">
                         <x-torchlight-code language='php'>
                             class Collection<T>
                             {
