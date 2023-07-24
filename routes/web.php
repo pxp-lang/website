@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'index')->name('index');
+Route::view('/', 'index', [
+    'codeSnippets' => collect(File::files(resource_path('code-snippets')))
+        ->map(fn (string $file) => File::get($file))
+        ->all(),
+])->name('index');

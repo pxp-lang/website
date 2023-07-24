@@ -1,0 +1,18 @@
+class Collection<T>
+{
+    public function __construct(
+        protected T[] $items = []
+    ) {}
+
+    public function push(T $item): static
+    {
+        $this->items[] = $item;
+
+        return $this;
+    }
+
+    public function all(): T[]
+    {
+        return $this->items;
+    }
+}

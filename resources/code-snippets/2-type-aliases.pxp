@@ -1,0 +1,16 @@
+type LabelValue = string | Closure | null;
+
+trait HasLabel
+{
+    protected LabelValue $label;
+
+    public function getLabel(): LabelValue
+    {
+        return $this->label;
+    }
+
+    public function setLabel(LabelValue $label): void
+    {
+        $this->label = $label;
+    }
+}

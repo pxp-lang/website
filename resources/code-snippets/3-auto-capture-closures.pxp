@@ -1,0 +1,8 @@
+$guests = array_filter($users, fn ($user) {
+    $guest = $repository->findByUserId($user->id);
+    return $guest !== null && in_array($guest->id, $guestsIds);
+});
+
+foreach ($guests as $guest) {
+    // ...
+}

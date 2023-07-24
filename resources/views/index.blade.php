@@ -26,55 +26,25 @@
                         </div>
                     </div>
                 </div>
-                <div x-data="{ block: 0, total: 2 }" class="sm:mt-24 mx-6 py-12 md:py-0 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
-                    <pre class="text-sm bg-[#24292e] text-[#e1e4e8] [&_.line-number]:mr-4 leading-loose pl-4 rounded-2xl">
-                        <x-torchlight-code language='php' x-show="block === 0">
-                            class Collection<T>
-                            {
-                                public function __construct(
-                                    protected T[] $items = []
-                                ) {}
+                <div x-data="{ block: 0, total: @js(count($codeSnippets)) }" class="sm:mt-24 mx-6 py-12 md:py-0 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
+                    @foreach($codeSnippets as $i => $codeSnippet)
+                        <pre class="text-sm bg-[#24292e] text-[#e1e4e8] [&_.line-number]:mr-4 leading-loose pl-4 rounded-2xl" x-show="block === @js($i)" x-cloak>
+                            <x-torchlight-code language="php">{!! $codeSnippet !!}</x-torchlight-code>
+                        </pre>
+                    @endforeach
 
-                                public function push(T $item): static
-                                {
-                                    $this->items[] = $item;
-
-                                    return $this;
-                                }
-
-                                public function all(): T[]
-                                {
-                                    return $this->items;
-                                }
-                            }
-                        </x-torchlight-code>
-
-                        <x-torchlight-code language='php' x-show="block === 1">
-                            type LabelValue = string | Closure | null;
-
-                            trait HasLabel
-                            {
-                                protected LabelValue $label;
-
-                                public function getLabel(): LabelValue
-                                {
-                                    return $this->label;
-                                }
-
-                                public function setLabel(LabelValue $label): void
-                                {
-                                    $this->label = $label;
-                                }
-                            }
-                        </x-torchlight-code>
-                    </pre>
-
-                    <div class="flex gap-x-4 mt-4 px-4">
+                    <div class="flex gap-x-4 mt-4 px-4 items-center">
+                        <button type="button" x-on:click="block = (block - 1) >= 0 ? (block - 1) : (total - 1)" class="text-xs">
+                            &larr;
+                        </button>
                         <template x-for="n in total">
-                            <button type="button" x-on:click="block = n - 1" class="h-2 bg-neutral-300 rounded-xl w-full" x-bind:class="{ 'bg-neutral-300': block !== (n - 1), 'bg-neutral-600': block === (n - 1) }">
+                            <button type="button" x-on:click="block = n - 1" class="h-2 rounded-xl w-full" x-bind:class="{ 'bg-purple-600/10': block !== (n - 1), 'bg-purple-600': block === (n - 1) }">
                                 <span class="sr-only">Show code block</span>
                             </button>
                         </template>
+                        <button type="button" x-on:click="block = (block + 1) >= total ? 0 : (block + 1)" class="text-xs">
+                            &rarr;
+                        </button>
                     </div>
                 </div>
             </div>
