@@ -26,9 +26,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="sm:mt-24 mx-6 py-12 md:py-0 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
+                <div x-data="{ block: 0, total: 2 }" class="sm:mt-24 mx-6 py-12 md:py-0 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
                     <pre class="text-sm bg-[#24292e] text-[#e1e4e8] [&_.line-number]:mr-4 leading-loose pl-4 rounded-2xl">
-                        <x-torchlight-code language='php'>
+                        <x-torchlight-code language='php' x-show="block === 0">
                             class Collection<T>
                             {
                                 public function __construct(
@@ -48,10 +48,36 @@
                                 }
                             }
                         </x-torchlight-code>
+
+                        <x-torchlight-code language='php' x-show="block === 1">
+                            type LabelValue = string | Closure | null;
+
+                            trait HasLabel
+                            {
+                                protected LabelValue $label;
+
+                                public function getLabel(): LabelValue
+                                {
+                                    return $this->label;
+                                }
+
+                                public function setLabel(LabelValue $label): void
+                                {
+                                    $this->label = $label;
+                                }
+                            }
+                        </x-torchlight-code>
                     </pre>
+
+                    <div class="flex gap-x-4 mt-4 px-4">
+                        <template x-for="n in total">
+                            <button type="button" x-on:click="block = n - 1" class="h-2 bg-neutral-300 rounded-xl w-full" x-bind:class="{ 'bg-neutral-300': block !== (n - 1), 'bg-neutral-600': block === (n - 1) }">
+                                <span class="sr-only">Show code block</span>
+                            </button>
+                        </template>
+                    </div>
                 </div>
             </div>
-            <div class="absolute inset-x-0 bottom-0 -z-10 h-24 bg-gradient-to-t from-white sm:h-32"></div>
         </div>
     </div>
 </x-layouts.main>
