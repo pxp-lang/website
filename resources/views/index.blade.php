@@ -29,7 +29,7 @@
                 <div x-data="{ block: 0, total: @js(count($codeSnippets)) }" class="sm:mt-24 mx-6 py-12 md:py-0 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
                     @foreach($codeSnippets as $i => $codeSnippet)
                         <pre class="text-sm bg-[#24292e] text-[#e1e4e8] [&_.line-number]:mr-4 leading-loose pl-4 rounded-2xl" x-show="block === @js($i)" x-cloak>
-                            <x-torchlight-code language="php">{!! $codeSnippet !!}</x-torchlight-code>
+                            <x-torchlight-code language="hack">{!! $codeSnippet !!}</x-torchlight-code>
                         </pre>
                     @endforeach
 
