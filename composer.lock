@@ -2672,16 +2672,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.0.0-beta.3",
+            "version": "v3.0.0-beta.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "04298292a365841879d64c13881d5499517bb597"
+                "reference": "b57896e44397d7c5b1c42db64dba4c8382959357"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/04298292a365841879d64c13881d5499517bb597",
-                "reference": "04298292a365841879d64c13881d5499517bb597",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/b57896e44397d7c5b1c42db64dba4c8382959357",
+                "reference": "b57896e44397d7c5b1c42db64dba4c8382959357",
                 "shasum": ""
             },
             "require": {
@@ -2733,7 +2733,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.0.0-beta.3"
+                "source": "https://github.com/livewire/livewire/tree/v3.0.0-beta.4"
             },
             "funding": [
                 {
@@ -2741,7 +2741,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-21T23:02:51+00:00"
+            "time": "2023-07-24T21:57:39+00:00"
         },
         {
             "name": "masterminds/html5",
@@ -4124,16 +4124,16 @@
         },
         {
             "name": "ryangjchandler/orbit",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ryangjchandler/orbit.git",
-                "reference": "fab8cd6837cd8a8c3291ae08f9a62d44a99c13b1"
+                "reference": "d5670e3a95049c5a15d78a8238f8f0a700d97f6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ryangjchandler/orbit/zipball/fab8cd6837cd8a8c3291ae08f9a62d44a99c13b1",
-                "reference": "fab8cd6837cd8a8c3291ae08f9a62d44a99c13b1",
+                "url": "https://api.github.com/repos/ryangjchandler/orbit/zipball/d5670e3a95049c5a15d78a8238f8f0a700d97f6a",
+                "reference": "d5670e3a95049c5a15d78a8238f8f0a700d97f6a",
                 "shasum": ""
             },
             "require": {
@@ -4183,7 +4183,7 @@
             "description": "A flat-file database driver for Eloquent.",
             "support": {
                 "issues": "https://github.com/ryangjchandler/orbit/issues",
-                "source": "https://github.com/ryangjchandler/orbit/tree/v1.2.0"
+                "source": "https://github.com/ryangjchandler/orbit/tree/v1.2.1"
             },
             "funding": [
                 {
@@ -4191,7 +4191,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-15T13:57:28+00:00"
+            "time": "2023-07-25T11:21:21+00:00"
         },
         {
             "name": "spatie/color",
