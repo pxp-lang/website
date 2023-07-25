@@ -10,6 +10,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="{{ asset('favicon.svg') }}" type="image/svg+xml">
 
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="PXP: Extended Preprocessor" />
+    <meta name="description" content="A work-in-progress superset of the PHP programming language with support for new language features and syntax." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:title" content="PXP: Extended Preprocessor" />
+    <meta property="og:description" content="A work-in-progress superset of the PHP programming language with support for new language features and syntax." />
+    <meta property="og:image" content="{{ asset('og.png') }}" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ url()->current() }}" />
+    <meta property="twitter:title" content="PXP: Extended Preprocessor" />
+    <meta property="twitter:description" content="A work-in-progress superset of the PHP programming language with support for new language features and syntax." />
+    <meta property="twitter:image" content="{{ asset('og.png') }}" />
+
     @isset($title)
         <title>{{ $title }} | PXP: Extended Preprocessor</title>
     @else
