@@ -37,6 +37,7 @@ class PostResource extends Resource
                 Card::make([
                     TextInput::make('title')
                         ->reactive()
+                        ->debounce()
                         ->afterStateUpdated(function ($state, Set $set) {
                             $set('slug', Str::slug($state));
                         })
