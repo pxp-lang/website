@@ -1,15 +1,15 @@
-<x-layouts.main title="Documentation">
-    <div class="bg-white py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl">
-                <h2 class="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
-                    Documentation
-                </h2>
+<x-layouts.docs title="Documentation">
+    <h2 class="text-3xl font-semibold mt-2">
+        Documentation
+    </h2>
 
-                <p class="mt-6">
-                    Documentation is a work-in-progress and will be available with the beta release of PXP.
-                </p>
-            </div>
-        </div>
+    <div class="prose mt-10">
+        @markdown
+Welcome to the PXP documentation.
+
+If this is your first time here and you're just getting started, we recommend you visit the [Installation](/docs/introduction/installation) page first.
+
+Otherwise, have fun and write some PXP!
+        @endmarkdown
     </div>
-</x-layouts.main>
+</x-layouts.docs>

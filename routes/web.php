@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Documentation;
 use App\Models\Post;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
@@ -38,3 +39,13 @@ Route::get('/blog/{post:slug}', function (Post $post) {
 Route::get('/docs', function () {
     return view('docs.index');
 })->name('docs.index');
+
+Route::get('/docs/{category}/{slug}', function (string $category, string $slug) {
+    $doc = Documentation::query()
+        ->where('category', $category)
+        ->where('slug', $slug)
+        ->firstOrFail();
+
+    return view('docs.show', ['doc' => $doc]);
+})
+    ->name('docs.show');
