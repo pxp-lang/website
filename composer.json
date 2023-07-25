@@ -15,6 +15,8 @@
         "laravel/sanctum": "^3.2.5",
         "laravel/tinker": "^2.8.1",
         "livewire/livewire": "^3.0@beta",
+        "ryangjchandler/orbit": "^1.2",
+        "spatie/laravel-markdown": "^2.3",
         "torchlight/torchlight-laravel": "^0.5.13"
     },
     "require-dev": {
@@ -24,7 +26,8 @@
         "mockery/mockery": "^1.6.4",
         "nunomaduro/collision": "^7.7",
         "phpunit/phpunit": "^10.2.6",
-        "spatie/laravel-ignition": "^2.2"
+        "spatie/laravel-ignition": "^2.2",
+        "spatie/laravel-stubs": "^2.5"
     },
     "autoload": {
         "psr-4": {

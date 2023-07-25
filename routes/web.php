@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Post;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,20 @@ Route::view('/', 'index', [
         ->map(fn (string $file) => File::get($file))
         ->all(),
 ])->name('index');
+
+Route::get('/blog', function () {
+    return view('blog.index', [
+        'posts' => Post::query()
+            ->whereNotNull('published_at')
+            ->latest('published_at')
+            ->get(),
+    ]);
+})->name('blog.index');
+
+Route::get('/blog/{post:slug}', function (Post $post) {
+    return view('blog.show', ['post' => $post]);
+})->name('blog.show');
+
+Route::get('/docs', function () {
+    return view('docs.index');
+})->name('docs.index');
