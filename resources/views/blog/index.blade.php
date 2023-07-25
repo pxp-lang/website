@@ -9,7 +9,7 @@
                 <div class="mt-10 space-y-16 border-t border-neutral-200 pt-10 sm:mt-16 sm:pt-16">
                     @foreach ($posts as $post)
                         <article class="flex max-w-xl flex-col items-start justify-between">
-                            <div class="flex items-center gap-x-4 text-xs">
+                            <div class="flex items-center gap-x-4 text-sm">
                                 <time datetime="2020-03-16" class="text-neutral-500">
                                     {{ $post->published_at->format('j M Y') }}
                                 </time>
@@ -25,13 +25,13 @@
                             </div>
                             <div class="group relative">
                                 <h3
-                                    class="mt-3 text-lg font-semibold leading-6 text-neutral-900 group-hover:text-neutral-600">
+                                    class="mt-3 text-xl font-semibold leading-6 text-neutral-900 group-hover:text-neutral-600">
                                     <a href="{{ route('blog.show', $post) }}">
                                         <span class="absolute inset-0"></span>
                                         {{ $post->title }}
                                     </a>
                                 </h3>
-                                <p class="mt-5 line-clamp-3 text-sm leading-6 text-neutral-600">{{ $post->excerpt }}</p>
+                                <p class="mt-5 line-clamp-3 leading-6 text-neutral-600">{{ $post->excerpt }}</p>
                             </div>
                         </article>
                     @endforeach
