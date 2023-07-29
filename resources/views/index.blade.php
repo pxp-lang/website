@@ -26,7 +26,24 @@
                         </div>
                     </div>
                 </div>
-                <div x-data="{ block: 0, total: @js(count($codeSnippets)) }" class="sm:mt-24 mx-6 py-12 md:py-0 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
+                <div x-data="{
+                    block: 0,
+                    total: @js(count($codeSnippets)),
+                    next() {
+                        if (this.block === (this.total - 1)) {
+                            this.block = 0;
+                        } else {
+                            this.block += 1;
+                        }
+                    },
+                    previous() {
+                        if (this.block === 0) {
+                            this.block = (this.total - 1)
+                        } else {
+                            this.block -= 1
+                        }
+                    }
+                }" x-on:keydown.right.document="next()" x-on:keydown.left.document="previous()" class="sm:mt-24 mx-6 py-12 md:py-0 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
                     @foreach($codeSnippets as $i => $codeSnippet)
                         <pre class="text-sm bg-[#24292e] text-[#e1e4e8] [&_.line-number]:mr-4 leading-loose pl-4 rounded-2xl" x-show="block === @js($i)" x-cloak>
                             <x-torchlight-code language="hack">{!! $codeSnippet !!}</x-torchlight-code>
@@ -34,7 +51,7 @@
                     @endforeach
 
                     <div class="flex gap-x-4 mt-4 px-4 items-center">
-                        <button type="button" x-on:click="block = (block - 1) >= 0 ? (block - 1) : (total - 1)" class="text-xs">
+                        <button type="button" x-on:click="previous()" class="text-xs">
                             &larr;
                         </button>
                         <template x-for="n in total">
@@ -42,7 +59,7 @@
                                 <span class="sr-only">Show code block</span>
                             </button>
                         </template>
-                        <button type="button" x-on:click="block = (block + 1) >= total ? 0 : (block + 1)" class="text-xs">
+                        <button type="button" x-on:click="next()" class="text-xs">
                             &rarr;
                         </button>
                     </div>
