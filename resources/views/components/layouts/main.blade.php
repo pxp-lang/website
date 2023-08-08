@@ -41,6 +41,11 @@
         }
     </style>
     <script src="//unpkg.com/alpinejs" defer></script>
+    @production
+        <!-- Fathom - beautiful, simple website analytics -->
+        <script src="https://cdn.usefathom.com/script.js" data-site="JONZZUWT" defer></script>
+        <!-- / Fathom -->
+    @endproduction
 </head>
 
 <body class="antialiased min-h-screen flex flex-col">
