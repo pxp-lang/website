@@ -1,30 +1,21 @@
 <x-layouts.main :title="$post->title">
-    <div class="bg-white py-24 sm:py-32">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl">
-                <h2 class="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl">
-                    {{ $post->title }}
-                </h2>
+    <section class="pt-32 lg:pt-48 pb-16 lg:pb-24 -mt-32 lg:-mt-24 index-hero">
+        <div class="space-y-8 max-w-5xl mx-auto w-full px-8 lg:px-0">
+            <h1 class="text-4xl lg:text-5xl font-medium tracking-tight underline-offset-4">
+                {{ $post->title }}
+            </h1>
 
-                <div class="flex items-center gap-x-4 text-sm mt-6">
-                    <time datetime="2020-03-16" class="text-neutral-500">
-                        {{ $post->published_at->format('j M Y') }}
-                    </time>
+            <p class="text-lg text-neutral-600 tracking-tight">
+                {{ $post->published_at->format('j M Y') }}
+            </p>
 
-                    <span
-                        @class([
-                            'relative z-10 rounded-full px-3 py-1.5 font-medium',
-                            'bg-red-50 text-red-600' => $post->category->color() === 'red',
-                            'bg-blue-50 text-blue-600' => $post->category->color() === 'blue',
-                        ])>
-                        {{ $post->category->name }}
-                    </span>
-                </div>
-
-                <article class="prose mt-10">
-                    @markdown($post->content)
-                </article>
-            </div>
+            <p class="text-2xl text-neutral-600 tracking-tight">
+                {{ $post->excerpt }}
+            </p>
         </div>
-    </div>
+    </section>
+
+    <article class="prose mt-10 max-w-5xl mx-auto prose-lg px-8 lg:px-0 pb-8 lg:pb-24">
+        @markdown($post->content)
+    </article>
 </x-layouts.main>
