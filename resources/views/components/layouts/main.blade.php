@@ -56,7 +56,10 @@
             </a>
 
             <nav class="flex items-center gap-x-8">
-                <a href="{{ route('blog.index') }}" class="font-medium text-lg">
+                <a href="{{ route('blog.index') }}" @class([
+                    'font-medium text-lg',
+                    'underline' => in_array(Route::currentRouteName(), ['blog.index', 'blog.show'])
+                ])>
                     Blog
                 </a>
 
