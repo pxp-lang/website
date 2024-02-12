@@ -1,70 +1,59 @@
 <x-layouts.main>
-    <div class="bg-white">
-        <div class="relative isolate overflow-hidden">
-            <div class="mx-auto max-w-7xl pt-10 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:pt-32">
-                <div class="px-6 lg:px-0 lg:pt-4">
-                    <div class="mx-auto max-w-2xl">
-                        <div class="max-w-lg">
-                            <h1 class="mt-10 text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                                Futuristic PHP development
-                            </h1>
-                            <p class="mt-6 text-lg leading-8 text-gray-600">
-                                PXP is an work-in-progress superset of the PHP programming language with support for new
-                                language features and syntax.
-                            </p>
-                            <div class="mt-10 flex items-center gap-x-6">
-                                <a href="{{ route('docs.index') }}"
-                                    class="rounded-md bg-purple-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-purple-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-600">
-                                    Documentation
-                                </a>
-                                <a href="https://github.com/pxp-lang" target="_blank"
-                                    class="text-sm font-semibold leading-6 text-gray-900">
-                                    View on GitHub
-                                    <span aria-hidden="true">→</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div x-data="{
-                    block: 0,
-                    total: @js(count($codeSnippets)),
-                    next() {
-                        if (this.block === (this.total - 1)) {
-                            this.block = 0;
-                        } else {
-                            this.block += 1;
-                        }
-                    },
-                    previous() {
-                        if (this.block === 0) {
-                            this.block = (this.total - 1)
-                        } else {
-                            this.block -= 1
-                        }
-                    }
-                }" x-on:keydown.right.document="next()" x-on:keydown.left.document="previous()" class="sm:mt-24 mx-6 py-12 md:py-0 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
-                    @foreach($codeSnippets as $i => $codeSnippet)
-                        <pre class="text-sm bg-[#24292e] text-[#e1e4e8] [&_.line-number]:mr-4 leading-loose pl-4 rounded-2xl" x-show="block === @js($i)" x-cloak>
-                            <x-torchlight-code language="hack">{!! $codeSnippet !!}</x-torchlight-code>
-                        </pre>
-                    @endforeach
+    <section class="pt-32 lg:pt-48 pb-16 lg:pb-24 -mt-32 lg:-mt-24 index-hero">
+        <div class="space-y-8 max-w-5xl mx-auto w-full px-8 lg:px-0">
+            <h1 class="text-4xl lg:text-5xl font-medium tracking-tight underline-offset-4">
+                A suite of high-performance tools for PHP developers – includes a <u>code formatter</u>, <u>static analyser</u>, <u>language server</u> and <u>superset language</u>.
+            </h1>
 
-                    <div class="flex gap-x-4 mt-4 px-4 items-center">
-                        <button type="button" x-on:click="previous()" class="text-xs">
-                            &larr;
-                        </button>
-                        <template x-for="n in total">
-                            <button type="button" x-on:click="block = n - 1" class="h-2 rounded-xl w-full" x-bind:class="{ 'bg-purple-600/10': block !== (n - 1), 'bg-purple-600': block === (n - 1) }">
-                                <span class="sr-only">Show code block</span>
-                            </button>
-                        </template>
-                        <button type="button" x-on:click="next()" class="text-xs">
-                            &rarr;
-                        </button>
-                    </div>
-                </div>
-            </div>
+            <p class="text-2xl max-w-3xl text-neutral-600 tracking-tight">
+                PXP is a modern development project that aims to provide a new set of tools for PHP developers, powered by an all-new toolchain written in <span class="font-medium text-[#E43B25]">Rust</span>.
+            </p>
         </div>
-    </div>
+    </section>
+
+    <section class="py-8 lg:py-24 space-y-8 max-w-5xl w-full mx-auto px-8 lg:px-0">
+        <h2 class="text-2xl font-semibold tracking-tight">
+            Goals
+        </h2>
+
+        <ol class="list-decimal ml-6 font-bold text-xl space-y-2">
+            <li>
+                <span class="font-normal">
+                    Develop a new <u>language server</u> for PHP that provides a high performance and reliable experience for developers, especially those using editors such as <u>Visual Studio Code</u>, <u>Sublime Text</u>, <u>NeoVim</u>, etc.
+                </span>
+            </li>
+
+            <li>
+                <span class="font-normal">
+                    Enhance developer experience and productivity by providing a new superset language that is <u>backwards-compatible</u> with PHP, along with a new <u>static analyser</u> and <u>code formatter</u> for faster development feedback and CI.
+                </span>
+            </li>
+
+            <li>
+                <span class="font-normal">
+                    Form an open-source community of people who strive to make the PHP ecosystem better.
+                </span>
+            </li>
+        </ol>
+    </section>
+
+    <section class="pb-8 lg:pb-24 space-y-8 max-w-5xl mx-auto w-full px-8 lg:px-0">
+        <h2 class="text-2xl font-semibold tracking-tight">
+            Helping out
+        </h2>
+
+        <div class="text-xl space-y-4">
+            <p>
+                Want to get your hands dirty and help bring this project to life? We're always looking for new contributors to jump in and help out!
+            </p>
+
+            <p>
+                The project is still in its early stages, so there are plenty of opportunities to get involved and make a difference.
+            </p>
+
+            <p>
+                Everything is open-source and developed in public on <a href="https://github.com/pxp-lang" class="underline font-medium decoration-sky-600">GitHub</a>, so feel free to take a look at the code and see if there's anything you'd like to help out with.
+            </p>
+        </div>
+    </section>
 </x-layouts.main>
