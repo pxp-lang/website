@@ -1,5 +1,5 @@
 <x-layouts.main>
-    <section class="pt-32 lg:pt-48 pb-16 lg:pb-24 -mt-32 lg:-mt-24 index-hero">
+    <section class="pt-32 lg:pt-48 pb-8 -mt-32 lg:-mt-24 index-hero">
         <div class="space-y-8 max-w-5xl mx-auto w-full px-8 lg:px-0">
             <h1 class="text-4xl lg:text-5xl font-medium tracking-tight underline-offset-4">
                 A suite of high-performance tools for PHP developers – includes a <u>code formatter</u>, <u>static analyser</u>, <u>language server</u> and <u>superset language</u>.
@@ -8,6 +8,10 @@
             <p class="text-2xl max-w-3xl text-neutral-600 tracking-tight">
                 PXP is a modern development project that aims to provide a new set of tools for PHP developers, powered by an all-new toolchain written in <span class="font-medium text-[#E43B25]">Rust</span>.
             </p>
+
+            <a href="{{ route('about') }}" class="text-lg md:text-xl bg-black/90 px-4 pt-2 pb-2.5 rounded-lg text-white/90 tracking-tight font-medium inline-block mt-6">
+                Learn more about the project
+            </a>
         </div>
     </section>
 
