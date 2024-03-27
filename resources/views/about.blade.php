@@ -52,7 +52,7 @@ This does mean that PXP core development sometimes requires knowledge of both Ru
 
         <div class="prose prose-lg">
         @markdown()
-#### Superset Language
+### Superset Language
 
 This is where it all started. This project aims to create a new language that is backwards-compatible with PHP, whilst also introducing new languages features and syntax to improve developer experience.
 
@@ -113,6 +113,26 @@ echo match ($point) {
     Point { y: $y } => "Y is {$y}!",
 }
 ```
+
+### Language Server
+
+A language server is a tool that provides your code editor with information about your code. It's the thing that powers stuff like autocomplete, go-to definition, and refactoring.
+
+Since PXP involves building a new superset language, we need a language server to provide all of the cool features that you'd expect from a modern code editor. A super fast, super reliable language server is essential for a good developer experience, so we're putting a lot of effort into making sure that ours is the best it can be.
+
+The fact that we're creating a superset language also means that this project benefits **all** PHP developers, not just those using PXP.
+
+### Static Analyser
+
+Building a static analyser is also a big part of the project. A language server requires some form of type inference (or type deduction). If we're already doing that, we might as well build a static analyser too!
+
+Hopefully by now you can start to see how all of these projects fit together and how much code can be shared between them.
+
+### Code Formatter & Linter
+
+Again, we're building a new language, so we need a way to make our code look _gooooood_. Much like the language server and static analyser, the code formatter and linter will be built on top of the same core libraries.
+
+It won't just help PXP users, it will help all PHP developers.
         @endmarkdown
         </div>
     </section>
