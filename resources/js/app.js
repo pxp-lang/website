@@ -12,4 +12,5 @@ Alpine.data("menu", () => ({
         this.show = !this.show;
     },
 }));
+
 Alpine.start();
