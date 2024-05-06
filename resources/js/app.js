@@ -1,4 +1,5 @@
 import Alpine from 'alpinejs';
+import './ast.js';
 
 Alpine.data("menu", () => ({
     show: false,

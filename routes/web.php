@@ -7,6 +7,8 @@ Route::view('/', 'index')->name('index');
 
 Route::view('/about', 'about')->name('about');
 
+Route::view('/ast', 'ast')->name('ast');
+
 Route::get('/blog', function () {
     return view('blog.index', [
         'posts' => Post::query()
